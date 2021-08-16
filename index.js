@@ -50,8 +50,6 @@ const assignJSON = scope => {
 		});
 };
 
-const delay = (time) => new LostPromise(resolve => setTimeout( resolve, time));
-
 const assignHelpers = scope => {
 	scope.or = function (value) {
 		return this.then(data => data || value);

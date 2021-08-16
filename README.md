@@ -10,7 +10,7 @@ Extends promise functionality.
 
 or 
 
-```yarn install lost-promise```
+```yarn add lost-promise```
 
 #### How to use
 
