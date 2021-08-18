@@ -1,4 +1,4 @@
-### **Not for production! Just for experiments! This thing is unreadable.**
+### **Not for production! Just for experiments!**
 
 #### Description
 
@@ -171,8 +171,8 @@ require('lost-promise').extendGlobal();
   "Any.toString", //String([Promise result])
   "Any.toNumber", //Number([Promise result])
   "Any.toBoolean", //Boolean([Promise result])
-  "String.parse", //JSON
-  "Object.stringify", //JSON
+  "String.parse", //JSON.parse
+  "Object.stringify", //JSON.stringify
   "Any.or", //[Promise result] || argument
   "Any.safeOr", //[Promise result] ?? argument
   "Any.returnOnCatch",

@@ -56,7 +56,7 @@ const assignHelpers = scope => {
 	};
 
 	scope.safeOr = function (value) {
-		return this.then(data => data ?? value);
+		return this.then(data => (data !== null && data !== undefined) ? data : value); //instead of ?? for older versions of node.js
 	};
 
 	scope.returnOnCatch = function (value) {
@@ -84,7 +84,7 @@ class LostPromise extends Promise {
 	}
 
 	static extendFunction (fn) {
-		return () => new this(resolve => resolve (fn()));
+		return (...props) => new this(resolve => resolve (fn(...props)));
 	}
 
 	static extendClass (cls, functions) {
