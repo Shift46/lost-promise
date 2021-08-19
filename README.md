@@ -19,8 +19,7 @@ instead of
 
 ```javascript
 const result = Object.fromEntries(Object.entries(
-	(await someAsyncFunctionThatReturnsAnArray())
-    .filter(v => v.score > 0)
+	(await someAsyncFunctionThatReturnsAnArray()).filter(v => v.score > 0)
 ));
 ```
 
@@ -176,6 +175,7 @@ require('lost-promise').extendGlobal();
   "Any.or", //[Promise result] || argument
   "Any.safeOr", //[Promise result] ?? argument
   "Any.returnOnCatch",
+  "Any.log", //console.log([Promise result])
   "Any.delay" //Delay in msec after promise
 ]
 ```

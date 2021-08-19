@@ -66,6 +66,14 @@ const assignHelpers = scope => {
 	scope.delay = function (time) {
 		return new LostPromise(resolve => setTimeout(() => resolve (this.then(data => data)), time));
 	};
+
+	scope.log = function (...options) {
+		return this.then(data => {
+			console.log(...options, data);
+
+			return data;
+		}); 
+	};
 };
 
 const assignAll = scope => {
